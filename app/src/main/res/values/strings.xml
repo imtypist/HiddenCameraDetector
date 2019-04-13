@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Hidden Camera Detector</string>
+    <string name="slogan">Stay safe, wherever you are!</string>
+    <string name="Important">Important</string>
+    <string name="CameraIRMessage">Built-in camera also detect IR light, what we have added is the luminosity effect, which has clear visibility</string>
+    <string name="OK">OK</string>
+    <string name="ir_camera_msg">If you see a white light in a dark room which you cannot see with naked eyes, this may be a hidden camera</string>
+    <string name="dont"> DON\'T SHOW ME AGAIN</string>
+    <string name="MagneticRadiationMessage"> Reading may not be accurate it depends on mobile phone sensor capability in that case user intervention is required.   If the readings are stuck at very high even when there is no camera or any device nearby,  gently shake your mobile phone or try to initialize the sensors by pointing your phone up and rotate it in a figure eight pattern.</string>
+
+    <!--bathroom string-->
+    <string name="title_activity_bathroom">POSSIBILITY OF CAM IN BATHROOM IS 12%</string>
+    <string name="content_activity_bathroom">Scan for below devices(for manual scan, scan for lens looking part over below devices)\n\n1 Water Heater - Precaution - Turn off heater and then bath.\n\n2. Mirror - Precaution : Touch the mirror. Do you feel any gap between your finger and its reflection? If No, there could be camera behind the mirror glass.\n\n3. Celling/Smoke Detector - Precaution : Apply sticker/tape over the viewable part of the detector.\n\n4. Lamps or Bulbs - Precaution : Can\'t be much, Use curtains whenever possible.\n\nIf you find anything suspicious, complain the authority.\n\nSome easy steps can save you from uneasy situations.
+
+</string>
+
+    <!--changing room-->
+    <string name="title_activity_changing_room">POSSIBILITY OF CAM IN CHANGING ROOM IS 12%</string>
+    <string name="content_activity_changing_room">Scan for below devices(for manual scan, scan for lens looking part over below devices)
+
+\n\n1. Mirror - Precaution : Touch the mirror. Do you feel any gap between your finger and its reflection? If No, there could be camera behind the mirror glass.
+
+\n\n2. Hanger - Check the lens looking aperture for hanger especially screw looking objects. Put cloths covering all the screws.
+
+\n\n3. Celling/Smoke Detector - Apply sticker/tape over the viewable part of the detector.
+
+\n\nIf you find anything suspicious, complain the authority.
+
+\n\nSome easy steps can save you from uneasy situations.
+    </string>
+
+
+    <!--bedroom-->
+    <string name="title_activity_bedroom">POSSIBILITY OF CAM IN BEDROOM IS 15%</string>
+    <string name="content_activity_bedroom">Scan for below devices(for manual scan, scan for lens looking part over below devices)\n\n1Smoke Detector - Precaution : Apply sticker/sellotape over the viewable part of the detector.\n\n2Air Condition - Precaution : If possible use fans and turn of the AC. Turn rotating blade fans OFF.\n\n3Television - Precaution : Turn off main power supply. Keep objects front of the lens looking pat of the TV.\n\n4Night Lamp - Precaution : Keep it off or change its direction.\n\n5Flower Pot - Change position to least viewable area.\n\n6Coffee Maker - Precaution : Unplug it and put it inside cupboard\nFinally do not forget to turn lights off.</string>
+
+    <!--outside-->
+    <string name="title_activity_outside">OUTSIDE YOU MIGHT BE UNDER CCTV</string>
+    <string name="content_activity_outside">In outside world, you are not supposed to hide your identity in official places so just be cautious and behave accordingly. \n\nSome easy steps can save you from uneasy situations.</string>
+
+    <!--instructions-->
+    <string name="content_activity_instructions">Usage:
+\n-Turn the lights off and open the IR Camera Detector to detect any white light which you cannot see with naked eye because this can be a Hidden IR Camera.
+
+\n-You can also check whether the TV remote is in working fine or not by placing the remote in front of IR camera detector app and press any key of tv remote the blinking light from the luminosity effect means your tv remote in working fine.
+
+\n\nDetect By Radiation :
+\n-Kindly Move Hidden Camera Detector app near to any object that you have doubt. For example - shower, lens looking part or changing room mirror. Hidden Camera Detector app analyses the Magnetic Field around the device. If the readings are similar to that of camera reading (90uF-140uF), Hidden Camera Detector app will beep when it detects it so that you can further investigate.
+
+\n\nUsage :
+\n-This app uses magnetic field to detect Hidden Cameras. The values may vary depending on the Sensor\'s limitations and quality. If the Values are stuck at very high, just shake your phone gently to calibrate.
+
+\n\nPermission:
+\n-This app uses phones camera permission to detect Hidden IR Cameras in your surroundings.
+    </string>
+</resources>
