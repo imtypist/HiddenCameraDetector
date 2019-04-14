@@ -38,20 +38,37 @@
             android:paddingRight="30dp"
             android:text="Hidden Camera"
             android:textColor="#FFFFFF"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeStepGranularity="2sp"/>
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_weight="8.5"
             android:fontFamily="sans-serif-medium"
             android:paddingLeft="30dp"
             android:paddingRight="30dp"
             android:paddingBottom="30dp"
             android:text="Detector"
             android:textColor="#FFFFFF"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeStepGranularity="2sp"/>
+
+        <LinearLayout
+            android:id="@+id/blank_layout_1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6"
+            android:orientation="vertical"
+            android:background="#00000000">
+
+        </LinearLayout>
 
 
         <GridLayout
@@ -91,7 +108,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:paddingBottom="5dp"
-                        android:src="@mipmap/resources" />
+                        android:src="@mipmap/infrared" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -123,21 +140,21 @@
 
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal|center_vertical"
                     android:layout_margin="14dp"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:paddingBottom="5dp"
-                        android:src="@mipmap/infrared" />
+                        android:src="@mipmap/resources" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="Detect by Radiation"
@@ -166,21 +183,21 @@
 
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal|center_vertical"
                     android:layout_margin="14dp"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:paddingBottom="5dp"
                         android:src="@mipmap/idea" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="Tips and Tricks"
@@ -209,21 +226,22 @@
 
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal|center_vertical"
                     android:layout_margin="14dp"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="wrap_content"
+                        android:id="@+id/instruction_icon"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:paddingBottom="5dp"
                         android:src="@mipmap/manual" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="Instructions"
@@ -238,19 +256,16 @@
 
         </GridLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2">
-
-        </RelativeLayout>
-
         <LinearLayout
+            android:background="#00000000"
+            android:id="@+id/blank_layout_2"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="2"
+            android:orientation="vertical">
 
         </LinearLayout>
+
     </LinearLayout>
 
     <TextView
@@ -259,5 +274,5 @@
         android:layout_alignParentBottom="true"
         android:text="Developed by Faisal Javed"
         android:textAlignment="center"
-        android:textSize="10sp"/>
+        android:textSize="12sp"/>
 </RelativeLayout>
