@@ -3,3 +3,4 @@
 1) Detection by Infrared Camera
 2) Detection by Magnetic Radiation
 
+View Screenshot In the Images Folder
