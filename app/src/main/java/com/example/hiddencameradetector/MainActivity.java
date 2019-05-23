@@ -1,6 +1,7 @@
 package com.example.hiddencameradetector;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,21 +10,41 @@ import android.transition.Fade;
 import android.view.View;
 import android.view.Window;
 import android.widget.GridLayout;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 
 public class MainActivity extends AppCompatActivity {
 
     GridLayout mainGrid;
+    //admob
+    private AdView mAdView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        MobileAds.initialize(this, "ca-app-pub-7747740414798372~4877537646");
+        //admob
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
+
         mainGrid = (GridLayout) findViewById(R.id.grid);
 
         openActivities(mainGrid);
 
+        TextView textView1 = (TextView) findViewById(R.id.app_name1);
+        TextView textView2 = (TextView) findViewById(R.id.app_name2);
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/afternoon.ttf");
+        textView1.setTypeface(typeface);
+        textView2.setTypeface(typeface);
 
     }
 

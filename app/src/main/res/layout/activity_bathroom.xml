@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".TipsContent.Bathroom">
+    tools:context=".TipsContent.Bathroom"
+    android:background="#1D1D1D">
+
 
     <ImageView
         android:id="@+id/bathroom_pic"
@@ -41,7 +43,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/content_activity_bathroom"
-            android:textSize="18dp"/>
+            android:textSize="18dp"
+            android:textColor="@color/white"/>
 
     </ScrollView>
 

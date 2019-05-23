@@ -10,7 +10,7 @@
 
     <!--bathroom string-->
     <string name="title_activity_bathroom">POSSIBILITY OF CAM IN BATHROOM IS 12%</string>
-    <string name="content_activity_bathroom">Scan for below devices(for manual scan, scan for lens looking part over below devices)\n\n1 Water Heater - Precaution - Turn off heater and then bath.\n\n2. Mirror - Precaution : Touch the mirror. Do you feel any gap between your finger and its reflection? If No, there could be camera behind the mirror glass.\n\n3. Celling/Smoke Detector - Precaution : Apply sticker/tape over the viewable part of the detector.\n\n4. Lamps or Bulbs - Precaution : Can\'t be much, Use curtains whenever possible.\n\nIf you find anything suspicious, complain the authority.\n\nSome easy steps can save you from uneasy situations.
+    <string name="content_activity_bathroom">Scan for below devices(for manual scan, scan for lens looking part over below devices)\n\n1. Water Heater - Precaution - Turn off heater and then bath.\n\n2. Mirror - Precaution : Touch the mirror. Do you feel any gap between your finger and its reflection? If No, there could be camera behind the mirror glass.\n\n3. Celling/Smoke Detector - Precaution : Apply sticker/tape over the viewable part of the detector.\n\n4. Lamps or Bulbs - Precaution : Can\'t be much, Use curtains whenever possible.\n\nIf you find anything suspicious, complain the authority.\n\nSome easy steps can save you from uneasy situations.
 
 </string>
 
@@ -32,7 +32,7 @@
 
     <!--bedroom-->
     <string name="title_activity_bedroom">POSSIBILITY OF CAM IN BEDROOM IS 15%</string>
-    <string name="content_activity_bedroom">Scan for below devices(for manual scan, scan for lens looking part over below devices)\n\n1Smoke Detector - Precaution : Apply sticker/sellotape over the viewable part of the detector.\n\n2Air Condition - Precaution : If possible use fans and turn of the AC. Turn rotating blade fans OFF.\n\n3Television - Precaution : Turn off main power supply. Keep objects front of the lens looking pat of the TV.\n\n4Night Lamp - Precaution : Keep it off or change its direction.\n\n5Flower Pot - Change position to least viewable area.\n\n6Coffee Maker - Precaution : Unplug it and put it inside cupboard\nFinally do not forget to turn lights off.</string>
+    <string name="content_activity_bedroom">Scan for below devices(for manual scan, scan for lens looking part over below devices)\n\n1. Smoke Detector - Precaution : Apply sticker/sellotape over the viewable part of the detector.\n\n2. Air Condition - Precaution : If possible use fans and turn of the AC. Turn rotating blade fans OFF.\n\n3. Television - Precaution : Turn off main power supply. Keep objects front of the lens looking pat of the TV.\n\n4. Night Lamp - Precaution : Keep it off or change its direction.\n\n5. Flower Pot - Change position to least viewable area.\n\n6. Coffee Maker - Precaution : Unplug it and put it inside cupboard\n\nFinally do not forget to turn lights off.</string>
 
     <!--outside-->
     <string name="title_activity_outside">OUTSIDE YOU MIGHT BE UNDER CCTV</string>

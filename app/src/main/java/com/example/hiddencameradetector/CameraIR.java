@@ -5,13 +5,19 @@ import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.FrameLayout;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
 
 public class CameraIR extends AppCompatActivity {
 
     CameraPreview mPreview;
     FrameLayout preview;
+    private InterstitialAd mInterstitialAd;
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -25,6 +31,12 @@ public class CameraIR extends AppCompatActivity {
         mPreview=new CameraPreview(this);
         preview=(FrameLayout)findViewById(R.id.camera_preview);
         preview.addView(mPreview);
+
+        //admob
+        MobileAds.initialize(this, "ca-app-pub-7747740414798372~4877537646");
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-7747740414798372~4877537646");
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
         //dialog box
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
@@ -49,6 +61,14 @@ public class CameraIR extends AppCompatActivity {
         alertDialog.show();
 
 
+    }
+
+
+    @Override
+    public void onBackPressed() {
+
+        mInterstitialAd.show();
+        super.onBackPressed();
     }
 }
 

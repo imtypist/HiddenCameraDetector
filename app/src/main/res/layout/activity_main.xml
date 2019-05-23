@@ -4,25 +4,75 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/bg1"
     tools:context=".MainActivity">
 
-    <ImageView
+    <com.github.florent37.shapeofview.shapes.ArcView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitStart"
-        android:src="@mipmap/bg" />
+        android:layout_height="150dp"
+        android:elevation="4dp"
+        app:shape_arc_height="20dp"
+        app:shape_arc_position="bottom"
+        app:shape_arc_cropDirection="outside">
+
+        <!-- YOUR CONTENT -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/app_name1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:paddingLeft="30dp"
+                android:paddingTop="20dp"
+                android:paddingRight="30dp"
+                android:text="Hidden Camera"
+                android:textColor="#FFFFFF"
+                android:textSize="40sp"
+                android:gravity="center"
+                app:autoSizeMaxTextSize="100sp"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeStepGranularity="2sp"
+                app:autoSizeTextType="uniform" />
+
+            <TextView
+                android:layout_marginTop="60dp"
+                android:gravity="center"
+                android:id="@+id/app_name2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingBottom="30dp"
+                android:text="Detector"
+                android:textColor="#FFFFFF"
+                android:textSize="40sp" />
+
+
+        </RelativeLayout>
+
+    </com.github.florent37.shapeofview.shapes.ArcView>
+
+
 
     <LinearLayout
-        android:layout_marginTop="110dp"
-        android:layout_marginLeft="30dp"
         android:layout_width="50dp"
         android:layout_height="2dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="110dp"
         android:background="@color/white"></LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
         android:orientation="vertical"
         android:weightSum="30">
 
@@ -30,8 +80,6 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
             android:fontFamily="sans-serif-medium"
             android:paddingLeft="30dp"
             android:paddingTop="20dp"
@@ -39,15 +87,14 @@
             android:text="Hidden Camera"
             android:textColor="#FFFFFF"
             android:textSize="30sp"
-            app:autoSizeTextType="uniform"
-            app:autoSizeMinTextSize="12sp"
             app:autoSizeMaxTextSize="100sp"
-            app:autoSizeStepGranularity="2sp"/>
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
             android:fontFamily="sans-serif-medium"
             android:paddingLeft="30dp"
             android:paddingRight="30dp"
@@ -55,27 +102,26 @@
             android:text="Detector"
             android:textColor="#FFFFFF"
             android:textSize="30sp"
-            app:autoSizeTextType="uniform"
-            app:autoSizeMinTextSize="12sp"
             app:autoSizeMaxTextSize="100sp"
-            app:autoSizeStepGranularity="2sp"/>
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform" />
 
-        <LinearLayout
-            android:id="@+id/blank_layout_1"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="6"
-            android:orientation="vertical"
-            android:background="#00000000">
 
-        </LinearLayout>
+    </LinearLayout>
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginTop="190dp"
+        android:orientation="vertical">
 
         <GridLayout
+
             android:id="@+id/grid"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="20.5"
+            android:layout_height="match_parent"
             android:alignmentMode="alignMargins"
             android:columnCount="2"
             android:padding="14dp"
@@ -90,11 +136,11 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="8dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="4dp"
-                app:cardUseCompatPadding="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true">
+                app:cardUseCompatPadding="true">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -132,11 +178,11 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="8dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="4dp"
-                app:cardUseCompatPadding="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true">
+                app:cardUseCompatPadding="true">
 
 
                 <LinearLayout
@@ -175,11 +221,11 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="8dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="4dp"
-                app:cardUseCompatPadding="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true">
+                app:cardUseCompatPadding="true">
 
 
                 <LinearLayout
@@ -218,11 +264,11 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="8dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="4dp"
-                app:cardUseCompatPadding="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true">
+                app:cardUseCompatPadding="true">
 
 
                 <LinearLayout
@@ -256,23 +302,18 @@
 
         </GridLayout>
 
-        <LinearLayout
-            android:background="#00000000"
-            android:id="@+id/blank_layout_2"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2"
-            android:orientation="vertical">
-
-        </LinearLayout>
-
     </LinearLayout>
 
-    <TextView
-        android:layout_width="match_parent"
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:text="Developed by Faisal Javed"
-        android:textAlignment="center"
-        android:textSize="12sp"/>
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-7747740414798372/8433639271">
+    </com.google.android.gms.ads.AdView>
+
 </RelativeLayout>

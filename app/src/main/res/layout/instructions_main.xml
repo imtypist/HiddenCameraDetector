@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#1D1D1D">
 
     <ImageView
         android:id="@+id/instructions_pic"
@@ -38,7 +39,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/content_activity_instructions"
-            android:textSize="18dp"/>
+            android:textSize="18dp"
+            android:textColor="@color/white"/>
 
     </ScrollView>
 

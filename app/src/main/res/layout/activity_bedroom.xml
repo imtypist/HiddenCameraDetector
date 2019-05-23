@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#1D1D1D">
 
     <ImageView
+        android:contentDescription="bedroom"
         android:id="@+id/bedroom_pic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,7 +19,6 @@
         android:id="@+id/bedroom_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/bedroom_pic"
         android:background="@color/colorAccent"
         android:padding="15dp"
         android:text="@string/title_activity_bedroom"
@@ -29,7 +29,6 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/bedroom_title"
         android:padding="15dp"
         android:scrollbars="none">
 
@@ -37,9 +36,10 @@
         <TextView
             android:textAlignment="center"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="@string/content_activity_bedroom"
-            android:textSize="18dp"/>
+            android:textSize="18sp"
+            android:textColor="@color/white"/>
 
     </ScrollView>
 

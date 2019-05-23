@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.GridLayout;
 
@@ -11,10 +12,14 @@ import com.example.hiddencameradetector.TipsContent.Bathroom;
 import com.example.hiddencameradetector.TipsContent.Bedroom;
 import com.example.hiddencameradetector.TipsContent.ChangingRoom;
 import com.example.hiddencameradetector.TipsContent.Outside;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
 
 public class TipsTricks extends AppCompatActivity {
 
     GridLayout mainGrid;
+    private InterstitialAd mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +27,11 @@ public class TipsTricks extends AppCompatActivity {
         setContentView(R.layout.tips_tricks_main);
         mainGrid = (GridLayout) findViewById(R.id.gridTips);
         openActivities(mainGrid);
+
+        MobileAds.initialize(this, "ca-app-pub-7747740414798372~4877537646");
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-7747740414798372~4877537646");
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
     }
 
     private void openActivities(GridLayout mainGrid) {
@@ -49,5 +59,12 @@ public class TipsTricks extends AppCompatActivity {
                 }
             });
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        mInterstitialAd.show();
+        super.onBackPressed();
     }
 }
