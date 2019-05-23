@@ -22,12 +22,6 @@
         app:cfl_wave_amplitude="0.10"
         app:cfl_wave_color="@color/colorPrimaryDark" />
 
-    <!--<ImageView-->
-        <!--android:id="@+id/imageView2"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="150dp"-->
-        <!--android:contentDescription="@null"-->
-        <!--android:src="@mipmap/ic_launcher" />-->
 
     <TextView
         android:id="@+id/textView"
