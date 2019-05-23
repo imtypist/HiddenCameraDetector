@@ -3,17 +3,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center"
     android:orientation="vertical"
     tools:context="com.example.hiddencameradetector.SplashScreen"
     android:background="#1D1D1D">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:contentDescription="@null"
-        android:src="@mipmap/ic_launcher" />
+    <com.mikhaellopez.circularfillableloaders.CircularFillableLoaders
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:id="@+id/circularFillableLoaders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/splashlogo"
+        app:cfl_border="true"
+        app:cfl_border_width="7dp"
+        app:cfl_progress="70"
+        app:cfl_wave_amplitude="0.10"
+        app:cfl_wave_color="@color/colorPrimaryDark" />
+
+    <!--<ImageView-->
+        <!--android:id="@+id/imageView2"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="150dp"-->
+        <!--android:contentDescription="@null"-->
+        <!--android:src="@mipmap/ic_launcher" />-->
 
     <TextView
         android:id="@+id/textView"

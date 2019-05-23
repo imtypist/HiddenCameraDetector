@@ -4,11 +4,15 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+
+import com.mikhaellopez.circularfillableloaders.CircularFillableLoaders;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +22,8 @@ public class SplashScreen extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_main);
+
+
         if (checkPermissions().size() == 0) {
             delayEnter();
         } else {
@@ -26,7 +32,7 @@ public class SplashScreen extends Activity {
     }
 
     private void delayEnter() {
-        new CountDownTimer(1200, 1200) {
+        new CountDownTimer(3000, 3000) {
             @Override
             public void onTick(long l) {
             }
