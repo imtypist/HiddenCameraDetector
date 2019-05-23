@@ -34,7 +34,8 @@
         android:layout_height="wrap_content"
         sv_withIndicatorLight="true"
         app:sv_withTremble="false"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        app:sv_trianglesColor="@color/white"/>
 
 
     <TextView
