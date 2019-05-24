@@ -35,7 +35,7 @@ public class CameraIR extends AppCompatActivity {
         //admob
         MobileAds.initialize(this, "ca-app-pub-7747740414798372~4877537646");
         mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId("ca-app-pub-7747740414798372~4877537646");
+        mInterstitialAd.setAdUnitId("ca-app-pub-7747740414798372/7600382834");
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
         //dialog box

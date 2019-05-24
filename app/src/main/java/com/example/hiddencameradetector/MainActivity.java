@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
-
         mainGrid = (GridLayout) findViewById(R.id.grid);
 
         openActivities(mainGrid);

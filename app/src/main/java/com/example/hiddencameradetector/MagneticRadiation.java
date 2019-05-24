@@ -10,16 +10,9 @@ import android.hardware.SensorManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-import android.view.KeyEvent;
-import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toolbar;
 
 import com.github.anastr.speedviewlib.AwesomeSpeedometer;
-import com.github.anastr.speedviewlib.Gauge;
-import com.github.anastr.speedviewlib.SpeedView;
-import com.github.anastr.speedviewlib.util.OnSpeedChangeListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
@@ -43,7 +36,7 @@ public class MagneticRadiation extends AppCompatActivity implements SensorEventL
         //admob
         MobileAds.initialize(this, "ca-app-pub-7747740414798372~4877537646");
         mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId("ca-app-pub-7747740414798372~4877537646");
+        mInterstitialAd.setAdUnitId("ca-app-pub-7747740414798372/7600382834");
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
 
