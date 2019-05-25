@@ -12,6 +12,7 @@ import android.widget.CheckBox;
 import android.widget.FrameLayout;
 
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 
@@ -22,6 +23,7 @@ public class CameraIR extends AppCompatActivity {
     private InterstitialAd mInterstitialAd;
     public static final String PREFS_NAME = "MyPrefsFile2";
     public CheckBox dontShowAgain;
+    private AdView mAdView;
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -41,6 +43,10 @@ public class CameraIR extends AppCompatActivity {
         mInterstitialAd = new InterstitialAd(this);
         mInterstitialAd.setAdUnitId("ca-app-pub-7747740414798372/4140909156");
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
+        //admob
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         //dialog box
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);

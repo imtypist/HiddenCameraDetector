@@ -18,6 +18,7 @@ import android.widget.TextView;
 
 import com.github.anastr.speedviewlib.AwesomeSpeedometer;
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 
@@ -31,6 +32,7 @@ public class MagneticRadiation extends AppCompatActivity implements SensorEventL
     MediaPlayer beep;
     AwesomeSpeedometer awesomeSpeedometer;
     private InterstitialAd mInterstitialAd;
+    private AdView mAdView;
 
     public static final String PREFS_NAME = "MyPrefsFile1";
     public CheckBox dontShowAgain;
@@ -45,6 +47,10 @@ public class MagneticRadiation extends AppCompatActivity implements SensorEventL
         mInterstitialAd = new InterstitialAd(this);
         mInterstitialAd.setAdUnitId("ca-app-pub-7747740414798372/4140909156");
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
+        //admob
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
     }
 
