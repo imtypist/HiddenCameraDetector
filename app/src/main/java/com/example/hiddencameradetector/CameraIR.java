@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -33,9 +34,9 @@ public class CameraIR extends AppCompatActivity {
         preview.addView(mPreview);
 
         //admob
-        MobileAds.initialize(this, "ca-app-pub-7747740414798372~4877537646");
+        MobileAds.initialize(this, "ca-app-pub-7747740414798372~6770941929");
         mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId("ca-app-pub-7747740414798372/7600382834");
+        mInterstitialAd.setAdUnitId("ca-app-pub-7747740414798372/4140909156");
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
         //dialog box
@@ -66,9 +67,13 @@ public class CameraIR extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-
-        mInterstitialAd.show();
+        if (mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
+        } else {
+            Log.d("TAG", "The interstitial wasn't loaded yet.");
+        }
         super.onBackPressed();
+
     }
 }
 

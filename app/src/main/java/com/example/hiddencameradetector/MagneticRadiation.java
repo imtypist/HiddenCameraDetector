@@ -10,6 +10,7 @@ import android.hardware.SensorManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.github.anastr.speedviewlib.AwesomeSpeedometer;
@@ -34,9 +35,9 @@ public class MagneticRadiation extends AppCompatActivity implements SensorEventL
         setContentView(R.layout.radiation_main);
 
         //admob
-        MobileAds.initialize(this, "ca-app-pub-7747740414798372~4877537646");
+        MobileAds.initialize(this,"ca-app-pub-7747740414798372~6770941929");
         mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId("ca-app-pub-7747740414798372/7600382834");
+        mInterstitialAd.setAdUnitId("ca-app-pub-7747740414798372/4140909156");
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
 
@@ -104,7 +105,13 @@ public class MagneticRadiation extends AppCompatActivity implements SensorEventL
 
     @Override
     public void onBackPressed() {
+        if (mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
+        } else {
+            Log.d("TAG", "The interstitial wasn't loaded yet.");
+        }
         beep.stop();
         super.onBackPressed();
+
     }
 }

@@ -22,7 +22,7 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-7747740414798372~4877537646"/>
+            android:value="ca-app-pub-7747740414798372~6770941929" />
 
         <activity
             android:name=".TipsContent.Outside"
