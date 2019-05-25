@@ -1,4 +1,4 @@
-package com.example.hiddencameradetector;
+package com.faisal.hiddencameradetector;
 
 import android.content.Context;
 import android.hardware.Camera;

@@ -1,10 +1,9 @@
-package com.example.hiddencameradetector.TipsContent;
+package com.faisal.hiddencameradetector.TipsContent;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.KeyEvent;
 
-import com.example.hiddencameradetector.R;
+import com.faisal.hiddencameradetector.R;
 
 public class Bedroom extends AppCompatActivity {
 

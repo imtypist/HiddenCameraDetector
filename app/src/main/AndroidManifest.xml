@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.hiddencameradetector">
+    package="com.faisal.hiddencameradetector">
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -25,22 +25,22 @@
             android:value="ca-app-pub-7747740414798372~6770941929" />
 
         <activity
-            android:name=".TipsContent.Outside"
+            android:name="com.faisal.hiddencameradetector.TipsContent.Outside"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeTips"/>
-        <activity android:name=".TipsContent.Bedroom"
+        <activity android:name="com.faisal.hiddencameradetector.TipsContent.Bedroom"
             android:theme="@style/AppThemeTips"
             android:screenOrientation="portrait"/>
-        <activity android:name=".TipsContent.ChangingRoom"
-            android:theme="@style/AppThemeTips"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".TipsContent.Bathroom"
+        <activity android:name="com.faisal.hiddencameradetector.TipsContent.ChangingRoom"
             android:theme="@style/AppThemeTips"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".SplashScreen"
-            android:parentActivityName=".MainActivity"
+            android:name="com.faisal.hiddencameradetector.TipsContent.Bathroom"
+            android:theme="@style/AppThemeTips"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.faisal.hiddencameradetector.SplashScreen"
+            android:parentActivityName="com.faisal.hiddencameradetector.MainActivity"
             android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -50,16 +50,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.faisal.hiddencameradetector.MainActivity"
             android:label="main_activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".CameraIR"
+            android:name="com.faisal.hiddencameradetector.CameraIR"
             android:label="camera_ir"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".MagneticRadiation"
+            android:name="com.faisal.hiddencameradetector.MagneticRadiation"
             android:label="magnetic_radiation"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeRadiaton"
@@ -67,11 +67,11 @@
 
 
         <activity
-            android:name=".Instructions"
+            android:name="com.faisal.hiddencameradetector.Instructions"
             android:label="Instructions"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".TipsTricks"
+            android:name="com.faisal.hiddencameradetector.TipsTricks"
             android:label="Tips and Tricks"
             android:theme="@style/AppThemeRadiaton"
             android:screenOrientation="portrait"/>

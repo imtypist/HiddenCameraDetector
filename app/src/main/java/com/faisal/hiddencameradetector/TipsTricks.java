@@ -1,18 +1,17 @@
-package com.example.hiddencameradetector;
+package com.faisal.hiddencameradetector;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.View;
 import android.widget.GridLayout;
 
-import com.example.hiddencameradetector.TipsContent.Bathroom;
-import com.example.hiddencameradetector.TipsContent.Bedroom;
-import com.example.hiddencameradetector.TipsContent.ChangingRoom;
-import com.example.hiddencameradetector.TipsContent.Outside;
+import com.faisal.hiddencameradetector.TipsContent.Bathroom;
+import com.faisal.hiddencameradetector.TipsContent.Bedroom;
+import com.faisal.hiddencameradetector.TipsContent.ChangingRoom;
+import com.faisal.hiddencameradetector.TipsContent.Outside;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;

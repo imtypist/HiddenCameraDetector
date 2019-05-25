@@ -1,8 +1,7 @@
-package com.example.hiddencameradetector;
+package com.faisal.hiddencameradetector;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;

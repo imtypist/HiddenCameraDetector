@@ -1,9 +1,8 @@
-package com.example.hiddencameradetector;
+package com.faisal.hiddencameradetector;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.KeyEvent;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
