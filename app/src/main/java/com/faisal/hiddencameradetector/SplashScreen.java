@@ -29,7 +29,7 @@ public class SplashScreen extends Activity {
     }
 
     private void delayEnter() {
-        new CountDownTimer(3000, 3000) {
+        new CountDownTimer(2000, 2000) {
             @Override
             public void onTick(long l) {
             }

@@ -6,7 +6,7 @@
     <string name="OK">OK</string>
     <string name="ir_camera_msg">If you see a white light in a dark room which you cannot see with naked eyes, this may be a hidden camera</string>
     <string name="dont"> DON\'T SHOW ME AGAIN</string>
-    <string name="MagneticRadiationMessage"> Reading may not be accurate it depends on mobile phone sensor capability in that case user intervention is required.   If the readings are stuck at very high even when there is no camera or any device nearby,  gently shake your mobile phone or try to initialize the sensors by pointing your phone up and rotate it in a figure eight pattern.</string>
+    <string name="MagneticRadiationMessage"> If the readings are stuck at very high even when there is no camera or any device nearby,  gently shake your mobile phone or try to initialize the sensors by pointing your phone up and rotate it in a figure eight pattern.</string>
 
     <!--bathroom string-->
     <string name="title_activity_bathroom">POSSIBILITY OF CAM IN BATHROOM IS 12%</string>

@@ -2,6 +2,7 @@ package com.faisal.hiddencameradetector;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -10,6 +11,9 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import com.github.anastr.speedviewlib.AwesomeSpeedometer;
@@ -28,6 +32,9 @@ public class MagneticRadiation extends AppCompatActivity implements SensorEventL
     AwesomeSpeedometer awesomeSpeedometer;
     private InterstitialAd mInterstitialAd;
 
+    public static final String PREFS_NAME = "MyPrefsFile1";
+    public CheckBox dontShowAgain;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,26 +46,6 @@ public class MagneticRadiation extends AppCompatActivity implements SensorEventL
         mInterstitialAd.setAdUnitId("ca-app-pub-7747740414798372/4140909156");
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
-
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-
-        // set title
-        alertDialogBuilder.setTitle(R.string.Important);
-
-        // set dialog message
-        alertDialogBuilder
-                .setMessage(R.string.MagneticRadiationMessage)
-                .setCancelable(false)
-                .setPositiveButton(R.string.OK,new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-
-                    }
-                });
-
-        // create alert dialog
-        AlertDialog alertDialog = alertDialogBuilder.create();
-        // show it
-        alertDialog.show();
     }
 
     @Override
@@ -75,6 +62,46 @@ public class MagneticRadiation extends AppCompatActivity implements SensorEventL
         beep = MediaPlayer.create(MagneticRadiation.this, R.raw.beep);
 
         awesomeSpeedometer.setUnit("");
+
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        LayoutInflater adbInflater = LayoutInflater.from(this);
+        View eulaLayout = adbInflater.inflate(R.layout.checkbox, null);
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+        String skipMessage = settings.getString("skipMessage", "NOT checked");
+        dontShowAgain = (CheckBox) eulaLayout.findViewById(R.id.skip);
+        alertDialogBuilder.setView(eulaLayout);
+        // set title
+        alertDialogBuilder.setTitle(R.string.Important);
+        // set dialog message
+        alertDialogBuilder
+                .setMessage(R.string.MagneticRadiationMessage)
+                .setCancelable(false)
+                .setPositiveButton(R.string.OK,new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+
+                        String checkBoxResult = "NOT checked";
+
+                        if (dontShowAgain.isChecked()) {
+                            checkBoxResult = "checked";
+                        }
+
+                        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+                        SharedPreferences.Editor editor = settings.edit();
+
+                        editor.putString("skipMessage", checkBoxResult);
+                        editor.apply();
+                        editor.commit();
+
+                    }
+                });
+
+        // create alert dialog
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        // show it
+        if (!skipMessage.equals("checked")) {
+            alertDialog.show();
+        }
+
     }
 
     @Override

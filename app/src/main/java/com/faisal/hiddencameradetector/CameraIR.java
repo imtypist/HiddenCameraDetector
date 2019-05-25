@@ -2,10 +2,13 @@ package com.faisal.hiddencameradetector;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.FrameLayout;
 
 import com.google.android.gms.ads.AdRequest;
@@ -17,6 +20,8 @@ public class CameraIR extends AppCompatActivity {
     CameraPreview mPreview;
     FrameLayout preview;
     private InterstitialAd mInterstitialAd;
+    public static final String PREFS_NAME = "MyPrefsFile2";
+    public CheckBox dontShowAgain;
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -39,7 +44,12 @@ public class CameraIR extends AppCompatActivity {
 
         //dialog box
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-
+        LayoutInflater adbInflater = LayoutInflater.from(this);
+        View eulaLayout = adbInflater.inflate(R.layout.checkbox, null);
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+        String skipMessage = settings.getString("skipMessage", "NOT checked");
+        dontShowAgain = (CheckBox) eulaLayout.findViewById(R.id.skip);
+        alertDialogBuilder.setView(eulaLayout);
         // set title
         alertDialogBuilder.setTitle(R.string.Important);
 
@@ -49,7 +59,18 @@ public class CameraIR extends AppCompatActivity {
                 .setCancelable(false)
                 .setPositiveButton(R.string.OK,new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
+                        String checkBoxResult = "NOT checked";
 
+                        if (dontShowAgain.isChecked()) {
+                            checkBoxResult = "checked";
+                        }
+
+                        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+                        SharedPreferences.Editor editor = settings.edit();
+
+                        editor.putString("skipMessage", checkBoxResult);
+                        editor.apply();
+                        editor.commit();
                     }
                 });
 
@@ -57,8 +78,9 @@ public class CameraIR extends AppCompatActivity {
         // create alert dialog
         AlertDialog alertDialog = alertDialogBuilder.create();
         // show it
-        alertDialog.show();
-
+        if (!skipMessage.equals("checked")) {
+            alertDialog.show();
+        }
 
     }
 
