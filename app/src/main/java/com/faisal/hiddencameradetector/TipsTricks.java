@@ -13,6 +13,7 @@ import com.faisal.hiddencameradetector.TipsContent.Bedroom;
 import com.faisal.hiddencameradetector.TipsContent.ChangingRoom;
 import com.faisal.hiddencameradetector.TipsContent.Outside;
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 
@@ -21,12 +22,18 @@ public class TipsTricks extends AppCompatActivity {
     GridLayout mainGrid;
     private InterstitialAd mInterstitialAd;
 
+    private AdView mAdView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tips_tricks_main);
         mainGrid = (GridLayout) findViewById(R.id.gridTips);
         openActivities(mainGrid);
+
+        //admob
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         MobileAds.initialize(this, "ca-app-pub-7747740414798372~6770941929");
         mInterstitialAd = new InterstitialAd(this);

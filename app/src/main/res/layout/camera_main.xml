@@ -6,7 +6,19 @@
     android:layout_height="match_parent"
     >
 
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-7747740414798372/6362736053">
+    </com.google.android.gms.ads.AdView>
+
     <FrameLayout
+        android:layout_below="@id/adView"
         android:id="@+id/camera_preview"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" />
