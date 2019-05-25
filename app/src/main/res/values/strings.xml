@@ -39,7 +39,7 @@
     <string name="content_activity_outside">In outside world, you are not supposed to hide your identity in official places so just be cautious and behave accordingly. \n\nSome easy steps can save you from uneasy situations.</string>
 
     <!--instructions-->
-    <string name="content_activity_instructions">Usage:
+    <string name="content_activity_instructions">Detection by IR Camera \n\nUsage:
 \n-Turn the lights off and open the IR Camera Detector to detect any white light which you cannot see with naked eye because this can be a Hidden IR Camera.
 
 \n-You can also check whether the TV remote is in working fine or not by placing the remote in front of IR camera detector app and press any key of tv remote the blinking light from the luminosity effect means your tv remote in working fine.
