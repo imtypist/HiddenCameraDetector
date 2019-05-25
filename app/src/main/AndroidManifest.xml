@@ -24,19 +24,25 @@
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-7747740414798372~4877537646"/>
 
-        <activity android:name=".TipsContent.Outside"
-            android:theme="@style/AppThemeTips"></activity>
+        <activity
+            android:name=".TipsContent.Outside"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeTips"/>
         <activity android:name=".TipsContent.Bedroom"
-            android:theme="@style/AppThemeTips"/>
+            android:theme="@style/AppThemeTips"
+            android:screenOrientation="portrait"/>
         <activity android:name=".TipsContent.ChangingRoom"
-            android:theme="@style/AppThemeTips"/>
+            android:theme="@style/AppThemeTips"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".TipsContent.Bathroom"
-            android:theme="@style/AppThemeTips" />
+            android:theme="@style/AppThemeTips"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".SplashScreen"
             android:parentActivityName=".MainActivity"
-            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen">
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -67,7 +73,8 @@
         <activity
             android:name=".TipsTricks"
             android:label="Tips and Tricks"
-            android:theme="@style/AppThemeRadiaton" />
+            android:theme="@style/AppThemeRadiaton"
+            android:screenOrientation="portrait"/>
 
     </application>
 
