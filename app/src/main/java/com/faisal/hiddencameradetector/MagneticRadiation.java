@@ -120,7 +120,6 @@ public class MagneticRadiation extends AppCompatActivity implements SensorEventL
         awesomeSpeedometer.speedTo(magnitude/10);
         if(magnitude>=90 && magnitude <=120) {
             magnetDetecTextView.setText("CAMERA DETECTED!");
-            releaseMediaPlayer();
             beep.start();
         }
         else if(magnitude>120) {
@@ -136,12 +135,6 @@ public class MagneticRadiation extends AppCompatActivity implements SensorEventL
 
     }
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-
-        releaseMediaPlayer();
-    }
 
     @Override
     public void onBackPressed() {
@@ -155,14 +148,4 @@ public class MagneticRadiation extends AppCompatActivity implements SensorEventL
 
     }
 
-    private void releaseMediaPlayer() {
-
-        if (beep != null) {
-
-            beep.release();
-
-            beep = null;
-
-        }
-    }
 }
