@@ -43,9 +43,9 @@ public class MagneticRadiation extends AppCompatActivity implements SensorEventL
         setContentView(R.layout.radiation_main);
 
         //admob
-        MobileAds.initialize(this,"ca-app-pub-7747740414798372~6770941929");
+        MobileAds.initialize(this,"ca-app-pub-7747740414798372~6605206806");
         mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId("ca-app-pub-7747740414798372/4140909156");
+        mInterstitialAd.setAdUnitId("ca-app-pub-7747740414798372/5713908919");
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
         //admob
         mAdView = findViewById(R.id.adView);
@@ -120,6 +120,7 @@ public class MagneticRadiation extends AppCompatActivity implements SensorEventL
         awesomeSpeedometer.speedTo(magnitude/10);
         if(magnitude>=90 && magnitude <=120) {
             magnetDetecTextView.setText("CAMERA DETECTED!");
+            releaseMediaPlayer();
             beep.start();
         }
         else if(magnitude>120) {
@@ -136,6 +137,13 @@ public class MagneticRadiation extends AppCompatActivity implements SensorEventL
     }
 
     @Override
+    protected void onStop() {
+        super.onStop();
+
+        releaseMediaPlayer();
+    }
+
+    @Override
     public void onBackPressed() {
         if (mInterstitialAd.isLoaded()) {
             mInterstitialAd.show();
@@ -145,5 +153,16 @@ public class MagneticRadiation extends AppCompatActivity implements SensorEventL
         beep.stop();
         super.onBackPressed();
 
+    }
+
+    private void releaseMediaPlayer() {
+
+        if (beep != null) {
+
+            beep.release();
+
+            beep = null;
+
+        }
     }
 }

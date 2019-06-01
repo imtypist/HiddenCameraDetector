@@ -22,7 +22,7 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-7747740414798372~6770941929" />
+            android:value="ca-app-pub-7747740414798372~6605206806" />
 
         <activity
             android:name="com.faisal.hiddencameradetector.TipsContent.Outside"

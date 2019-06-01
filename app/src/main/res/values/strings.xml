@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Hidden Camera Detector</string>
+    <string name="app_name">Hidden Camera Detector Lite</string>
     <string name="slogan">Stay safe, wherever you are!</string>
     <string name="Important">Important</string>
     <string name="CameraIRMessage">Built-in camera also detect IR light, what we have added is the luminosity effect, which has clear visibility</string>

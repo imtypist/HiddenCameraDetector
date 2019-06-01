@@ -18,9 +18,9 @@ private AdView mAdView;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.instructions_main);
 
-        MobileAds.initialize(this, "ca-app-pub-7747740414798372~6770941929");
+        MobileAds.initialize(this, "ca-app-pub-7747740414798372~6605206806");
         mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId("ca-app-pub-7747740414798372/4140909156");
+        mInterstitialAd.setAdUnitId("ca-app-pub-7747740414798372/5713908919");
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
         //admob
         mAdView = findViewById(R.id.adView);
