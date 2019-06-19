@@ -17,6 +17,7 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 
 import com.github.anastr.speedviewlib.AwesomeSpeedometer;
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
@@ -31,8 +32,8 @@ public class MagneticRadiation extends AppCompatActivity implements SensorEventL
     int max = 0;
     MediaPlayer beep;
     AwesomeSpeedometer awesomeSpeedometer;
-    private InterstitialAd mInterstitialAd;
-    private AdView mAdView;
+    public InterstitialAd mInterstitialAd;
+    public AdView mAdView;
 
     public static final String PREFS_NAME = "MyPrefsFile1";
     public CheckBox dontShowAgain;
@@ -52,6 +53,48 @@ public class MagneticRadiation extends AppCompatActivity implements SensorEventL
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
+        mInterstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                // Code to be executed when an ad finishes loading.
+                Log.v("MagneticRadiation", "onloaded");
+            }
+
+            @Override
+            public void onAdFailedToLoad(int errorCode) {
+                // Code to be executed when an ad request fails.
+                Log.v("MagneticRadiation", "loadfailed");
+
+            }
+
+            @Override
+            public void onAdOpened() {
+                // Code to be executed when the ad is displayed.
+                Log.v("MagneticRadiation", "adOpened");
+
+            }
+
+            @Override
+            public void onAdClicked() {
+                // Code to be executed when the user clicks on an ad.
+                Log.v("MagneticRadiation", "adClicked");
+
+            }
+
+            @Override
+            public void onAdLeftApplication() {
+                // Code to be executed when the user has left the app.
+                Log.v("MagneticRadiation", "adLeftApp");
+
+            }
+
+            @Override
+            public void onAdClosed() {
+                // Code to be executed when the interstitial ad is closed.
+                Log.v("MagneticRadiation", "adClosed");
+
+            }
+        });
     }
 
     @Override

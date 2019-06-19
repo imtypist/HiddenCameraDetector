@@ -30,15 +30,18 @@ public class TipsTricks extends AppCompatActivity {
         mainGrid = (GridLayout) findViewById(R.id.gridTips);
         openActivities(mainGrid);
 
+        MobileAds.initialize(this, "ca-app-pub-7747740414798372~6605206806");
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-7747740414798372/5713908919");
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+
         //admob
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
-        MobileAds.initialize(this, "ca-app-pub-7747740414798372~6605206806");
-        mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId("ca-app-pub-7747740414798372/5713908919");
-        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+
+
     }
 
     private void openActivities(GridLayout mainGrid) {

@@ -8,11 +8,13 @@ import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.GridLayout;
 import android.widget.TextView;
-
 import com.codemybrainsout.ratingdialog.RatingDialog;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
+
+import java.util.List;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -82,4 +84,6 @@ public class MainActivity extends AppCompatActivity {
             });
         }
     }
+
+
 }

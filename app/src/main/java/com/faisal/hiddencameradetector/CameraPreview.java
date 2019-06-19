@@ -22,7 +22,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
     private static Camera getCameraInstance() {
         Camera c = null;
         try {
-            c = Camera.open();
+            c = Camera.open(0);
         } catch (Exception e) {
             Log.d(TAG, "camera is not available");
         }
